@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category }} Solutions for {{ problem }} | SilverTech Safe</title>
+    <meta name="description" content="Explore vetted solutions for {{ problem }}. Our {{ category }} guide helps caregivers find the right tools for aging in place.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 leading-relaxed">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-blue-900 tracking-tight">SilverTech Safe</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="/category-safety.html" class="hover:text-blue-600">Safety</a>
+                <a href="/category-health.html" class="hover:text-blue-600">Health</a>
+                <a href="/lead_magnet.html" class="text-blue-600 font-bold underline">Free Safety Audit</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <header class="mb-12">
+            <nav class="flex text-slate-500 text-xs mb-4 uppercase tracking-wider">
+                <a href="/" class="hover:text-blue-600">Home</a>
+                <span class="mx-2 text-slate-300">/</span>
+                <span class="text-slate-900 font-bold">{{ category }}</span>
+            </nav>
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
+                {{ category }} Solutions
+            </h1>
+            <p class="text-xl text-slate-600 max-w-3xl">Expert-vetted tools to help you manage <strong>{{ problem }}</strong> with confidence.</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {% for item in category_products %}
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition-all group flex flex-col">
+                        <div class="mb-4">
+                            <span class="text-[10px] font-black text-blue-600 uppercase tracking-tighter">Vetted Choice</span>
+                            <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition">{{ item.Product_Solution }}</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-6 flex-grow">{{ item.Benefit }}</p>
+                        <div class="space-y-3">
+                            <a href="/{{ item.Problem_ID }}.html" class="block w-full text-center py-3 bg-blue-50 text-blue-700 font-bold rounded-lg hover:bg-blue-100 transition">Read Review →</a>
+                            <a href="{{ item.Affiliate_Link }}" target="_blank" class="block w-full text-center py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition shadow-md">Amazon Price</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <aside class="lg:col-span-4">
+                <div class="bg-blue-900 text-white rounded-3xl p-8 sticky top-24 shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">The Caregiver's Checklist</h3>
+                    <p class="text-blue-200 text-sm mb-6">Get our monthly guide to the best tech for independent living.</p>
+                    <a href="/lead_magnet.html" class="block w-full py-4 bg-blue-500 hover:bg-blue-400 text-center font-bold rounded-xl transition">Subscribe Free</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t py-12 mt-20 text-center px-6">
+        <p class="text-sm text-slate-500 italic max-w-3xl mx-auto">
+            <strong>Affiliate Disclosure:</strong> SilverTechSafe.com is supported by readers. If you purchase through links on our site, we may earn a commission at no extra cost to you. 
+        </p>
+    </footer>
+</body>
+</html>

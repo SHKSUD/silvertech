@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caregiver's guide to {{ product }} for {{ problem }}. Expert-vetted for safety.">
+    <title>{{ product }} Review | SilverTech Safe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{{ FAQ_Tech_Q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ FAQ_Tech_A }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ FAQ_Safety_Q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ FAQ_Safety_A }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ FAQ_Value_Q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ FAQ_Value_A }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ FAQ_Privacy_Q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ FAQ_Privacy_A }}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ FAQ_Monthly_Fee_Q }}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{ FAQ_Monthly_Fee_A }}" }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="bg-white border-b sticky top-0 z-50 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-900 tracking-tight">SilverTech Safe</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="/category-safety.html" class="hover:text-blue-600">Safety</a>
+                <a href="/category-health.html" class="hover:text-blue-600">Health</a>
+                <a href="/lead_magnet.html" class="text-blue-600 font-bold underline">Free Safety Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <article class="lg:col-span-2" itemscope itemtype="https://schema.org/Article">
+                <header class="mb-8">
+                    <nav class="text-xs font-bold text-slate-400 uppercase mb-4">
+                        <a href="/">Home</a> / <a href="/category-{{ category_slug }}.html">{{ category }}</a>
+                    </nav>
+                    <h1 itemprop="headline" class="text-4xl md:text-5xl font-black text-slate-900 mb-4 leading-tight">
+                        {{ product }} Review: Solving "{{ problem }}"
+                    </h1>
+                    <p class="text-xl text-slate-500 italic">"{{ hook }}"</p>
+                </header>
+
+                <div itemprop="articleBody" class="prose prose-blue lg:prose-xl text-slate-700">
+                    <h2 class="text-2xl font-bold text-slate-900">Expert Vetting & Analysis</h2>
+                    <p>{{ benefit }}</p>
+
+                    <div class="mt-12 space-y-8 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <h3 class="text-xl font-bold border-b pb-2">Caregiver Frequently Asked Questions</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="font-bold text-blue-800">Q: {{ FAQ_Tech_Q }}</p>
+                                <p class="mt-2">A: {{ FAQ_Tech_A }}</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-blue-800">Q: {{ FAQ_Privacy_Q }}</p>
+                                <p class="mt-2">A: {{ FAQ_Privacy_A }}</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-blue-800">Q: {{ FAQ_Monthly_Fee_Q }}</p>
+                                <p class="mt-2">A: {{ FAQ_Monthly_Fee_A }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <aside>
+                <div class="bg-white border border-slate-200 p-8 rounded-3xl sticky top-28 shadow-xl">
+                    <div class="mb-6">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase">{{ Success_Rate }} Success Rate</span>
+                    </div>
+                    
+                    <div class="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">Tech Specs</p>
+                        <ul class="text-sm space-y-1">
+                            <li><strong>Setup:</strong> {{ Setup_Difficulty }}</li>
+                            <li><strong>Power:</strong> {{ Battery_Life }}</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="{{ affiliate_link }}" target="_blank" class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl font-black hover:bg-blue-500 transition shadow-lg">
+                        Check Price on Amazon →
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t py-12 text-center">
+        <p class="text-sm text-slate-500 italic max-w-3xl mx-auto">
+            <strong>Affiliate Disclosure:</strong> SilverTechSafe.com is supported by readers. If you purchase through links on our site, we may earn a commission at no extra cost to you.
+        </p>
+    </footer>
+</body>
+</html>
