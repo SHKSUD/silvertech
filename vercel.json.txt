@@ -1,8 +1,0 @@
-{
-  "github": {
-    "silent": true
-  },
-  "installCommand": "pip install -r requirements.txt",
-  "buildCommand": "python build.py",
-  "publishDir": "dist"
-}
